@@ -13,7 +13,7 @@
 
 			</div><!-- #content -->
 		</div><!-- .main-page-->	
-	</div><!-- .main-content-area full-->
+		</div><!-- .main-content-area full-->
 
 	<div class="footer-area full">
 		<div class="main-page">	
@@ -26,6 +26,7 @@
 			</footer><!-- #colophon -->
 		</div><!-- .main-page -->
 	</div><!-- .footer-area full-->
+
 
 <?php wp_footer(); ?>
 

@@ -20,11 +20,12 @@
 <?php wp_head(); ?>
 </head>
 
+
+
 <body <?php body_class(); ?>>
 	<div class="header-area full">
 		<div class="main-page">
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'kn' ); ?></a>
-
 			<header id="masthead" class="site-header inner" role="banner">
 				<div class="site-branding">
 					<?php

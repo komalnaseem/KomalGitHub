@@ -46,7 +46,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Setting up Structure
 --------------------------------------------------------------*/
 .full{ 						/* Added to header, content and footer. This is a multi selector */
-	
+	background-color: #66b1f9; /* Set the background color for the site */
 }
 
 .main-page{ 				/* Added to header, content and footer. This is a multi selector */
@@ -56,6 +56,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .inner{ 					/* Added to header, content and footer. This is a multi selector */
 	padding: 2em 0; 		/* 2em for top/bottom and 0 for left and right */
+}	
+.header-area.full	{		/* Set the image on top right of the header */
+	background-image: url(images/jobsearch.jpg);	/* Image file with path */
+	background-repeat: no-repeat;					/* Do not repeat image */
+	background-position: right top;					/* Place the image on top right */
+	background-size: 10% 20%;						/* Resize the image to 10% of the total width and 20% of the total height */
 }
 
 #primary{
