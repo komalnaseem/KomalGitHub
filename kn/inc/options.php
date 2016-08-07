@@ -100,16 +100,16 @@ add_action( 'admin_init', 'kn_settings_init' );
 
 $options = get_option('kn_options_settings');
 
-if (!empty($options['kn_email_address']))
+if (!empty($options['kn_email_address']))				/* This conditional checks wheather or not there is an email address and echos the label and data only when there is one */
 	echo "My Email Address: " . $options['kn_email_address'];
 
-if (!empty($options['kn_cell_number']))
+if (!empty($options['kn_cell_number']))					/* This conditional checks wheather or not there is a cell number and echos the label and data only when there is one */
 	echo " My Cell Number: " . $options['kn_cell_number'];
 
-if (!empty($options['kn_fb_url']))
+if (!empty($options['kn_fb_url']))						/* This conditional checks wheather or not there is a url and echos the label and data only when there is one */
 	echo " My Facebook URL: " . $options['kn_fb_url'];
 
-if (!empty($options['kn_cell_number']) OR !empty($options['kn_cell_number']) OR !empty($options['kn_fb_url']))
+if (!empty($options['kn_email_address']) OR !empty($options['kn_cell_number']) OR !empty($options['kn_fb_url'])) /* This conditional checks wheather we are displaying any of the above three options and issues a new line command if we are displaying atleast one. */
 	echo '<br />';
 
 
