@@ -139,4 +139,26 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * Load Options file.
+ */
 require get_stylesheet_directory() . '/inc/options.php';
+
+/**
+ * Displaying Custom Field.
+ */
+add_action ('loop_start','port_customfield');
+function port_customfield() {
+	if ( is_single() ) {
+		/*global $post;*/
+		/*echo get_post_meta( $post => ID, 'portfolio_custom', true ); */
+		/*echo get_post_meta( get_the_ID(), 'portfolio_custom', true ); */
+		$field = get_post_meta( $post->ID, 'portfolio_custom', true );
+		print_r ($field, true);
+		echo '<div class="new-class">' . $field . '</div>';
+		/*$customfield = get_post_meta (get_the_ID, 'Portfolio_Custom', true); 
+		<?php echo get_post_meta ( get_the_ID(), 'portfolio_custom', true ); ?>*/
+		
+	}
+}
+ 

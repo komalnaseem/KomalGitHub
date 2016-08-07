@@ -75,6 +75,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	width: 33.5%;			/* This is to set 33.5 % of the screen width for secondary content. */
 }
 
+
+/*@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);*/
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,400italic,700|Oswald);
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
