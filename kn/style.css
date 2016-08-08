@@ -75,10 +75,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	width: 33.5%;			/* This is to set 33.5 % of the screen width for secondary content. */
 }
 
+.signature {				/* Added style to signature (bold and italic) */
+	font-style : italic;
+	font-weight : bold;
+}
 
 /*@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);*/
 
-@import url(http://fonts.googleapis.com/css?family=Lato:400,400italic,700|Oswald);
+/*@import url(http://fonts.googleapis.com/css?family=Lato:400,400italic,700|Oswald);*/
 
 /*--------------------------------------------------------------
 # Normalize
@@ -302,10 +306,10 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: sans-serif;
+	color: #404040; /* Grey */
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	line-height: 1.5;
 }
 
@@ -315,7 +319,29 @@ h3,
 h4,
 h5,
 h6 {
-	clear: both;
+	clear: both; 
+}
+
+.blog h1,
+.blog h2,
+.blog h3,
+.blog h4,
+.blog h5,
+.blog h6 {
+	font-family: 'Droid Sans', serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	/*clear: both; */
+}
+
+.blog h1 a,
+.blog h2 a,
+.blog h3 a,
+.blog h4 a,
+.blog h5 a,
+.blog h6 a {
+	color: #518e00;  /* Green color */
+	text-decoration : none;
 }
 
 p {
@@ -577,9 +603,10 @@ a:active {
 
 .main-navigation ul {
 	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
+	list-style: none; 
+	margin: auto; /* Modified 0 to auto*/
+	padding-left: 0; 
+	max-width: 100%;
 }
 
 .main-navigation li {
@@ -590,13 +617,15 @@ a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	color: #fff; /*Added */
+	padding: 15px 40px; /*Added */
 }
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
-	top: 1.5em;
+	top: 3.3em; 	/*changed from 1.5em to 3.3em this is for sub menu */
 	left: -999em;
 	z-index: 99999;
 }
@@ -611,15 +640,16 @@ a:active {
 }
 
 .main-navigation ul ul li {
-
 }
 
 .main-navigation li:hover > a,
 .main-navigation li.focus > a {
+	background-color: #444; /* Added */
 }
 
 .main-navigation ul ul :hover > a,
 .main-navigation ul ul .focus > a {
+		background-color: #444; /* Added */
 }
 
 .main-navigation ul ul a:hover,

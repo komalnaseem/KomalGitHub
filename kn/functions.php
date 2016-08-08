@@ -103,6 +103,8 @@ add_action( 'widgets_init', 'kn_widgets_init' );
  */
 function kn_scripts() {
 	wp_enqueue_style( 'kn-style', get_stylesheet_uri() );
+	
+	wp_enqueue_style('kn-google-fonts', '//fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic');
 
 	wp_enqueue_script( 'kn-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -161,4 +163,15 @@ function port_customfield() {
 		
 	}
 }
- 
+
+/**
+ * Add Signature Image after single post
+ */
+add_filter('the_content','add_signature', 1);
+
+function add_signature($text) {
+ global $post;
+ if($post->post_type == 'post')
+	 $text .= '<div class="signature">Komal Naseem</div>';
+ return $text;
+} 

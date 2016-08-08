@@ -23,6 +23,8 @@ get_header(); ?>
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
 			endif;
+			
+			<div class="signature">Komal Naseem</div>
 
 		endwhile; // End of the loop.
 		?>

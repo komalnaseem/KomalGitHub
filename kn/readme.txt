@@ -36,3 +36,17 @@ Komal includes support for Infinite Scroll in Jetpack.
 
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+
+==Custom Settings ==
+
+//Theme Options Page//
+
+The theme options page includes three options that the user can include on the live site. 
+
+1. A textbox to display your email: This allows the user to simply type in their email address and click 'Save Changes' for this option to show on the live site.
+2. A textbox to display your cell phone number: This allows the user to simply type in their cellphone number and click 'Save Changes' for this option to display on the live site.
+3. A textbox to display your Facebook URL: This allows the user to simply type in their Facebook URL and click 'Save Changes' for this option to show on the live site.
+
+Note: The user must type in information in the textbox area for the email, cell phone number and email address to show up on the live site. For example, if no email is inserted, then no text for an email will show up on the live site, and so forth, for the other two options. 
+
+
