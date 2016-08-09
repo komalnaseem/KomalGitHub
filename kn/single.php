@@ -11,10 +11,24 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
 		<?php
-		while ( have_posts() ) : the_post();
 
+		while ( have_posts() ) : the_post();
+			/*add_action ('loop_start','port_customfield');
+			function port_customfield() {
+				/*if ( is_single() ) {
+					global $post;
+					/*echo get_post_meta( $post => ID, 'portfolio_custom', true ); 
+					/*echo get_post_meta( get_the_ID(), 'portfolio_custom', true ); 
+					$field = get_post_meta( $post->ID, 'portfolio_custom', true );
+					echo '<div class="new-class">' . $field . '</div>';
+					/*$customfield = get_post_meta (get_the_ID, 'Portfolio_Custom', true); 
+					<?php echo get_post_meta ( get_the_ID(), 'portfolio_custom', true ); ?>
+				}
+			}*/
+			
+
+			
 			get_template_part( 'template-parts/content', get_post_format() );
 
 			the_post_navigation();

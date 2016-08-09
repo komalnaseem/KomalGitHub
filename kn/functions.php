@@ -104,7 +104,7 @@ add_action( 'widgets_init', 'kn_widgets_init' );
 function kn_scripts() {
 	wp_enqueue_style( 'kn-style', get_stylesheet_uri() );
 	
-	wp_enqueue_style('kn-google-fonts', '//fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic');
+	wp_enqueue_style('kn-google-fonts', 'http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic');
 
 	wp_enqueue_script( 'kn-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -145,24 +145,6 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load Options file.
  */
 require get_stylesheet_directory() . '/inc/options.php';
-
-/**
- * Displaying Custom Field.
- */
-add_action ('loop_start','port_customfield');
-function port_customfield() {
-	if ( is_single() ) {
-		/*global $post;*/
-		/*echo get_post_meta( $post => ID, 'portfolio_custom', true ); */
-		/*echo get_post_meta( get_the_ID(), 'portfolio_custom', true ); */
-		$field = get_post_meta( $post->ID, 'portfolio_custom', true );
-		print_r ($field, true);
-		echo '<div class="new-class">' . $field . '</div>';
-		/*$customfield = get_post_meta (get_the_ID, 'Portfolio_Custom', true); 
-		<?php echo get_post_meta ( get_the_ID(), 'portfolio_custom', true ); ?>*/
-		
-	}
-}
 
 /**
  * Add Signature Image after single post

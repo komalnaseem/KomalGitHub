@@ -19,18 +19,7 @@
 		<div class="main-page">	
 			<footer id="colophon" class="site-footer inner" role="contentinfo">
 				<div class="site-info">
-					<?php $options = get_option('kn_options_settings');
-					if (!empty($options['kn_email_address']))	/* This conditional checks wheather or not there is an email address and echoes the label/data only when there is one */
-						echo "My Email Address: " . $options['kn_email_address'] . '<br />';
-
-					if (!empty($options['kn_cell_number']))		/* This conditional checks wheather or not there is a cell number and echoes the label/data only when there is one */
-						echo " My Cell Number: " . $options['kn_cell_number'] . '<br />';
-
-					if (!empty($options['kn_fb_url']))			/* This conditional checks wheather or not there is a url and echoes the label and data only when there is one */
-						/*echo " My Facebook URL: "><a href= . $options['kn_fb_url'] .'</a><br />';*/
-						echo " My Facebook URL: " . $options['kn_fb_url'] . '<br />';
-					 ?>	
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kn' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'kn' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kn' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'kn' ), 'WordPress' ); ?></a>
 					<span class="sep"> | </span>
 					<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'kn' ), 'kn', '<a href="http://phoenix.sheridanc.on.ca/~ccit3680/" rel="designer">Komal Naseem</a>' ); ?>
 				</div><!-- .site-info -->
