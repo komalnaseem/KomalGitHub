@@ -58,10 +58,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	padding: 2em 0; 		/* 2em for top/bottom and 0 for left and right */
 }	
 .header-area.full	{		/* Set the image on top right of the header */
-	background-image: url(images/jobsearch.jpg);	/* Image file with path */
-	background-repeat: no-repeat;					/* Do not repeat image */
-	background-position: right top;					/* Place the image on top right */
-	background-size: 10% 20%;						/* Resize the image to 10% of the total width and 20% of the total height */
+	/* background-image: url(images/jobsearch.jpg); Image file with path 
+	background-repeat: no-repeat;					Do not repeat image 
+	background-position: right top;					 Place the image on top right 
+	background-size: 10% 20%;						 Resize the image to 10% of the total width and 20% of the total height */
 }
 
 #primary{
@@ -81,6 +81,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	font-weight: bold;
 }
 
+img.wp-post-image {  /* Set the width/height of the feautured image on the custom page */
+	width :300px;
+	height: 200px;
+}
 /* This is to style custom fields */
 .post-meta-key {
 	color: green; font-weight: bold; font-size: 90%; 

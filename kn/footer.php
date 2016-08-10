@@ -19,6 +19,19 @@
 		<div class="main-page">	
 			<footer id="colophon" class="site-footer inner" role="contentinfo">
 				<div class="site-info">
+					<?php $options = get_option('kn_options_settings');		
+					if (!empty($options['kn_email_address']))	/* This conditional checks wheather or not there is an email address and echoes the label/data only when there is one */
+						echo "My Email Address: " . $options['kn_email_address'] . '<br />';
+						
+					if(isset($options['kn_image_checkbox']) == 'on'){
+						/*echo $options['kn_image_checkbox'] . '<br />'; */
+						echo 'it is footer on';
+						echo the_post_thumbnail (null, $size = 'post-thumbnail') . '<br />';
+					}	
+						
+					echo "My Sidebar Option: " . $options['kn_sidebar_radio_field'] . '<br />';
+					
+					?>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kn' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'kn' ), 'WordPress' ); ?></a>
 					<span class="sep"> | </span>
 					<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'kn' ), 'kn', '<a href="http://phoenix.sheridanc.on.ca/~ccit3680/" rel="designer">Komal Naseem</a>' ); ?>
