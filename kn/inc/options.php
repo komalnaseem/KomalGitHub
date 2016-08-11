@@ -59,9 +59,7 @@ function kn_settings_init() {
 	function kn_image_checkbox_render() { 
 		$options = get_option( 'kn_options_settings' );
 		?>
-		<input type="checkbox" 
-		name="kn_options_settings[kn_image_checkbox]" <?php if 
-		(isset($options['kn_image_checkbox'])) checked('on', ($options['kn_image_checkbox']) ); ?>value="on" /> <label>Turn it On </label>
+		<input type="checkbox" name="kn_options_settings[kn_image_checkbox]" <?php if (isset($options['kn_image_checkbox'])) checked('on', ($options['kn_image_checkbox']) ); ?> value="on" /> <label>Turn it On </label>
 		<?php
 	}
 
@@ -80,10 +78,10 @@ function kn_settings_init() {
 		$options = get_option( 'kn_options_settings' );
 		?>
 		<input type="radio" name="kn_options_settings[kn_sidebar_radio_field]" <?php
-		if(isset($options['kn_sidebar_radio_field'])) checked( $options['kn_sidebar_radio_field'], 1 ); ?>value="left" /><label>Left</label><br />
+		if(isset($options['kn_sidebar_radio_field'])) checked( $options['kn_sidebar_radio_field'], 1); ?> value="left" /><label>Left</label><br />
 		
 		<input type="radio" name="kn_options_settings[kn_sidebar_radio_field]" <?php
-		if(isset($options['kn_sidebar_radio_field'])) checked( $options['kn_sidebar_radio_field'], 2 ); ?>value="right" /><label>Right</label><br />
+		if(isset($options['kn_sidebar_radio_field'])) checked( $options['kn_sidebar_radio_field'], 2 ); ?> value="right" /><label>Right</label><br />
 		<?php
 	}
 		

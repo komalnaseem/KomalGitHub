@@ -66,31 +66,44 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 #primary{
 	float: left; 			/* This is to float the primary content to the left side of the screen. */
-	padding-right: 50px; 	/* This is to show right padding of 50px so the content is not flushed right on the screen. */
-	width: 66.5%; 			/* This is to set 66.5 % of the screen width for primary content. */
-}
+	padding: 20px 20px; 	/* This is to show right padding of 50px so the content is not flushed right on the screen. */
+	width: 66.5%;  			/* This is to set 66.5 % of the screen width for primary content. */
+	border: 10px solid black;
+	}
 
-#secondary{
+#secondary.left {
 	float: left;			/* This is to float the secondary content to the left side of the screen. */
 	width: 33.5%;			/* This is to set 33.5 % of the screen width for secondary content. */
 	font-size: 75%;
 }
 
+#secondary.right {
+	float: right;			/* This is to float the secondary content to the left side of the screen. */
+	width: 33.5%;			/* This is to set 33.5 % of the screen width for secondary content. */
+	font-size: 75%;
+}
 .signature {				/* Added style to signature (bold and italic) */
 	font-style: italic;
 	font-weight: bold;
 }
 
 img.wp-post-image {  /* Set the width/height of the feautured image on the custom page */
-	width :300px;
-	height: 200px;
+	/*width : 300px;
+	height: 200px;*/
+	width : 100%;
+	height: 100%;
 }
 /* This is to style custom fields */
 .post-meta-key {
-	color: green; font-weight: bold; font-size: 90%; 
+	color: green;
+	font-weight: bold;
+	font-size: 90%; 
+	display: inline;
 	}
 .post-meta {
-	font-variant: small-caps; color: maroon; font-size: 80%;
+	font-variant: small-caps; 
+	color: maroon;
+	font-size: 80%;
 	}
 /*--------------------------------------------------------------
 # Normalize
@@ -634,7 +647,7 @@ a:active {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
-	top: 3.3em; 	/*changed from 1.5em to 3.3em this is for sub menu */
+	top: 2em; 	/*changed from 1.5em to 3.3em this is for sub menu */
 	left: -999em;
 	z-index: 99999;
 }

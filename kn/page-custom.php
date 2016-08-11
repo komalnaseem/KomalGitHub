@@ -26,14 +26,11 @@ get_header(); ?>
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();
 				endif;*/
-
-				if(isset($options['kn_image_checkbox']) == 'on'){
-						/*echo $options['kn_image_checkbox'] . '<br />'; */
-						echo the_post_thumbnail (null, $size = 'post-thumbnail') . '<br />';
-				} else {
-					echo 'it is page_custom off';
-				}
 				
+				$options = get_option('kn_options_settings');		
+				if(isset($options['kn_image_checkbox']) == 'on'){
+					echo the_post_thumbnail (null, $size = 'post-thumbnail') . '<br />';
+				}
 			endwhile; // End of the loop.
 			?>
 		</main><!-- #main -->
