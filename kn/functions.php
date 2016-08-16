@@ -156,4 +156,6 @@ function add_signature($text) {
  if($post->post_type == 'post')
 	 $text .= '<div class="signature">Komal Naseem</div>';
  return $text;
-} 
+};
+ 
+                                       

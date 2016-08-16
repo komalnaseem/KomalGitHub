@@ -24,7 +24,7 @@ function kn_settings_init() {
 	);
 	
 	function kn_options_page_section_callback() { /* The function called in add_settings_section */
-		echo 'Please provide your email address and cell number to be displayed on the site.';
+		echo 'Please provide your email address and set other option for the site.';
 	}
 
 /**

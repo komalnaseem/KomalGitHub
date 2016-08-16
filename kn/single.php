@@ -38,7 +38,7 @@ get_header(); ?>
 				comments_template();
 			endif;
 			
-			<div class="signature">Komal Naseem</div>
+		/*	<div class="signature">Komal Naseem</div> */
 
 		endwhile; // End of the loop.
 		?>

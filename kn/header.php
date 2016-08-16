@@ -45,9 +45,17 @@
 					endif; ?>
 				</div><!-- .site-branding -->
 				
-				<?php /* This is to display custom fields */
-					the_meta(); 
-				?>
+					<?php /* This is to display custom fields */
+					$author = get_post_meta ($post->ID, 'author', true);
+				
+					global $wp_query;
+					$postid = $wp_query->post->ID;
+					$author = get_post_meta($postid, 'author', true);
+					?>
+	
+					<p> JK Rowling <?php echo $author; ?>.</p>
+					
+					<php wp_reset_query(); ?>
 				
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'kn' ); ?></button>
