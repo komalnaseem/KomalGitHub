@@ -1,6 +1,6 @@
 /*
 Theme Name: Komal
-Theme URI: http://myportfolio.com/
+Theme URI: http://phoenix.sheridanc.on.ca/~ccit3680/ 
 Author: Komal Naseem
 Author URI: http://phoenix.sheridanc.on.ca/~ccit3680/
 Description: Assignment 1 - Creating a WordPress Theme
@@ -46,7 +46,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Setting up Structure
 --------------------------------------------------------------*/
 .full{ 						/* Added to header, content and footer. This is a multi selector */
-	background-color: #66b1f9; /* Set the background color for the site */
+	background-color: #66b1f9; /* Sets the background color for the site */
 }
 
 .main-page{ 				/* Added to header, content and footer. This is a multi selector */
@@ -57,55 +57,47 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .inner{ 					/* Added to header, content and footer. This is a multi selector */
 	padding: 2em 0; 		/* 2em for top/bottom and 0 for left and right */
 }	
-.header-area.full	{		/* Set the image on top right of the header */
-	/* background-image: url(images/jobsearch.jpg); Image file with path 
-	background-repeat: no-repeat;					Do not repeat image 
-	background-position: right top;					 Place the image on top right 
-	background-size: 10% 20%;						 Resize the image to 10% of the total width and 20% of the total height */
-}
 
-#primary{
+#primary{					/* This is to set the formatting for the main area of the site. */
 	float: left; 			/* This is to float the primary content to the left side of the screen. */
 	padding: 20px 20px; 	/* This is to add left and right padding of 50px so the content is not flushed on either side of the screen. */
 	width: 66.5%;  			/* This is to set 66.5 % of the screen width for primary content. */
 	border: 10px solid black;
 }
 
-#secondary.left {
+#secondary.left {			/* This is to set the formatting for the sidebar area when the sitebar option is selected to be displayed on the left side. */
 	float: left;			/* This is to float the secondary content to the left side of the screen. */
 	padding: 10px 10px;		/* This is to add left and right padding of 10px so the content is not flushed on either side of the screen */
 	width: 33.5%;			/* This is to set 33.5 % of the screen width for secondary content. */
-	font-size: 75%;
+	font-size: 75%;			/* This is to set the font-size oto75% of the font-size set globally. */
 }
 
-#secondary.right {
-	float: right;			/* This is to float the secondary content to the left side of the screen. */
+#secondary.right {			/* This is to set the formatting for the sidebar area when the sitebar option is selected to be displayed on the right side. */
+	float: right;			/* This is to float the secondary content to the right side of the screen. */
 	padding: 10px 10px;		/* This is to add left and right padding of 10px so the content is not flushed on either side of the screen */
 	width: 33.5%;			/* This is to set 33.5 % of the screen width for secondary content. */
-	font-size: 75%;
+	font-size: 75%;			/* This is to set the font-size oto75% of the font-size set globally. */
 }
 .signature {				/* Added style to signature (bold and italic) */
-	font-style: italic;
-	font-weight: bold;
+	font-style: italic;		/* To set font-style italic */
+	font-weight: bold;		/* To set font-weight bold */
 }
 
-img.wp-post-image {  /* Set the width/height of the feautured image on the custom page */
-	/*width : 300px;
-	height: 200px;*/
-	width : 75%;
-	height: 75%;
+img.wp-post-image {  		/* Sets the width/height of the feautured image on the custom page */
+	width : 75%;			/* Sets the width to 75% of the image size */
+	height: 75%;			/* Sets the height to 75% of the image size */
 }
-/* This is to style custom fields */
+							/* This is to style custom fields */
 .post-meta-key {
-	color: green;
-	font-weight: bold;
-	font-size: 90%; 
-	display: inline;
+	color: green;			/* Sets the custom field label color to green */
+	font-weight: bold;		/* Sets the custom field label font wieght to bold */
+	font-size: 90%; 		/* Sets the custom field label font size to 90% of the set size */
+	display: inline;		/* ??? */
 	}
 .post-meta {
-	font-variant: small-caps; 
-	color: maroon;
-	font-size: 80%;
+	font-variant: small-caps; /* Sets the custom field data font varient to small-caps meaning a word like course will be displayed like Course */
+	color: maroon;			/* Sets the custom field data color to maroon */
+	font-size: 80%;			/* Sets the custom field data font size to 80% of the set size */
 	}
 /*--------------------------------------------------------------
 # Normalize
@@ -177,7 +169,7 @@ dfn {
 
 h1 {
 	/*font-size: 1.5em;  changed from 2em to 1em */
-	font-size: 125%;
+	font-size: 125%; /* Sets the header size to 125% of the default setting */
 	margin: 0.67em 0;
 }
 
@@ -330,11 +322,11 @@ button,
 input,
 select,
 textarea {
-	color: #404040; /* Grey */
-	font-family: 'Droid Serif', Helvetica, sans-serif;
-	font-size: 12px;
-	font-size: 1.2rem;
-	line-height: 1;
+	color: #404040; /* This is Grey color */
+	font-family: 'Droid Serif', Helvetica, sans-serif; /* Added 'Droid Serif' and Helvetica fonts  */
+	font-size: 12px;   /* Reduce the font size to 12px */
+	font-size: 1.2rem; /* Reduce the font size to 1.2 rem */
+	line-height: 1;	   /* Reduce the line height to 1 */
 }
 
 h1,
@@ -345,7 +337,7 @@ h5,
 h6 {
 	clear: both; 
 }
-
+/* Add comments here, this is a new section */
 .blog h1,
 .blog h2,
 .blog h3,
@@ -358,6 +350,7 @@ h6 {
 	/*clear: both; */
 }
 
+/* Add comments here, this is a new section */
 .blog h1 a,
 .blog h2 a,
 .blog h3 a,
@@ -628,9 +621,9 @@ a:active {
 .main-navigation ul {
 	display: none;
 	list-style: none; 
-	margin: 0; /* Modified 0 to auto*/
+	margin: 0; 
 	padding-left: 0; 
-	max-width: 100%;
+	max-width: 100%; /* Added max-width to 100%, add comments here */
 }
 
 .main-navigation li {
@@ -641,15 +634,15 @@ a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-	color: #fff; /*Added */
-	padding: 15px 40px; /*Added */
+	color: #fff; 		/*Added, add comments here */
+	padding: 15px 40px; /*Added, add comments here */
 }
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
-	top: 2.0em; 	/*changed from 1.5em to 3.3em this is for sub menu */
+	top: 2.0em; 	/*changed from 1.5em to 3.3em this is for sub menu, add comments here */
 	left: -999em;
 	z-index: 99999;
 }
@@ -668,12 +661,12 @@ a:active {
 
 .main-navigation li:hover > a,
 .main-navigation li.focus > a {
-	background-color: #444; /* Added */
+	background-color: #444; /* Added, add comments here */
 }
 
 .main-navigation ul ul :hover > a,
 .main-navigation ul ul .focus > a {
-		background-color: #444; /* Added */
+		background-color: #444; /* Added, add comments here */
 }
 
 .main-navigation ul ul a:hover,
@@ -697,7 +690,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-## Responsive Design
+## Responsive Design, , add comments here
 --------------------------------------------------------------*/
 .menu-toggle,
 .main-navigation.toggled ul {
