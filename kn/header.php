@@ -20,15 +20,12 @@
 <?php wp_head(); ?>
 </head>
 
-
-
 <body <?php body_class(); ?>>
 	<div class="header-area full">
 		<div class="main-page">
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'kn' ); ?></a>
 			<header id="masthead" class="site-header inner" role="banner">
 				<div class="site-branding">
-
 					<?php
 					if ( is_front_page() && is_home() ) : ?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -37,7 +34,6 @@
 					<?php
 					endif;
 
-					
 					$description = get_bloginfo( 'description', 'display' );
 					if ( $description || is_customize_preview() ) : ?>
 						<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
@@ -45,17 +41,19 @@
 					endif; ?>
 				</div><!-- .site-branding -->
 				
-					<?php /* This is to display custom fields */
-					$link = get_post_meta ($post->ID, 'link', true);
-				
-					global $wp_query;
-					$postid = $wp_query->post->ID;
-					$link = get_post_meta($postid, 'link', true);
+				<?php /* This is to display mission statement custom field on the home page*/
+				$mission = get_post_meta ($post->ID, 'mission', true);
+			
+				global $wp_query;
+				$postid = $wp_query->post->ID;
+				$mission = get_post_meta($postid, 'mission', true); ?>
+				<?php
+				if (!empty($mission)) :	/* This conditional checks wheather or not the mission statement is there and echoes the label/data only when there is one */
 					?>
-					
-					<?php/* <p> <?php echo $link; ?>.</p>  This was used for author that we have changed it to link on home page*/ ?>
-					<p><a href="<?php echo "My Linkedin Profile: " .esc_url( __( $link , 'kn' ) ); ?>"></a>
-					<php wp_reset_query(); ?>
+					<p class="mission"> <?php echo "My Mission Statement: " . $mission; ?></p>  
+				<?php
+				endif; ?>
+				<?php wp_reset_query(); ?>
 				
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'kn' ); ?></button>

@@ -98,7 +98,16 @@ img.wp-post-image {  		/* Sets the width/height of the feautured image on the cu
 	font-variant: small-caps; /* Sets the custom field data font varient to small-caps meaning a word like course will be displayed like Course */
 	color: maroon;			/* Sets the custom field data color to maroon */
 	font-size: 80%;			/* Sets the custom field data font size to 80% of the set size */
+	}	
+.copyright {
+	float: right;			/* This is to float the secondary content to the right side of the screen. */
 	}
+.mission{
+	font-style: italic;
+	font-weight: bold;
+	color: #444;
+}
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -688,7 +697,6 @@ a:active {
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
 }
-
 /*--------------------------------------------------------------
 ## Responsive Design, , add comments here
 --------------------------------------------------------------*/

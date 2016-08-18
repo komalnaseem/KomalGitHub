@@ -44,8 +44,10 @@ function kn_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'kn' ),
-	) );
+		'primary' => esc_html__( 'Primary', 'kn' )
+	) ); 
+	
+	/*register_nav_menus( array('secondary'=>__( 'Footer Menu' ),));*/
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments

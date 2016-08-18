@@ -3,8 +3,8 @@
 function kn_add_submenu() {	/* This function adds sub menu to Apperance Menu*/
 		add_submenu_page( 
 			'themes.php', 						/* Main Menu */
-			'My Options Page', 					/* Options page description */
-			'Theme Options', 					/* Sub Menu Name */
+			'Job Portfolio Options Page', 		/* Options page description */
+			'Portfolio Options', 					/* Sub Menu Name */
 			'manage_options', 
 			'theme_options', 
 			'my_theme_options_page'
@@ -17,14 +17,14 @@ function kn_settings_init() {
 	register_setting( 'theme_options', 'kn_options_settings' );
 	
 	add_settings_section(
-		'kn_options_page_section', 				/* The ID */
-		'Your section description', 			/* Section Title */
-		'kn_options_page_section_callback', 	/* Call back function */
-		'theme_options'							/* Page - matches menu_slug set in add_submenu_page */
+		'kn_options_page_section', 											/* The ID */
+		'These are the available customizations for your portfolio site', 	/* Section Title */
+		'kn_options_page_section_callback', 								/* Call back function */
+		'theme_options'														/* Page - matches menu_slug set in add_submenu_page */
 	);
 	
 	function kn_options_page_section_callback() { /* The function called in add_settings_section */
-		echo 'Please provide your email address and set other option for the site.';
+		echo 'Please provide your email address, select the checkbox for featured image, and select the sidebar position.';
 	}
 
 /**
@@ -91,7 +91,7 @@ function kn_settings_init() {
 	function my_theme_options_page(){ 
 		?>
 		<form action="options.php" method="post">
-			<h2>My Options Page</h2>
+			<h2>Job Portfolio Options Page</h2>
 			<?php
 			settings_fields( 'theme_options' );
 			do_settings_sections( 'theme_options' );
