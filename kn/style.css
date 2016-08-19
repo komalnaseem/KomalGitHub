@@ -45,67 +45,63 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Setting up Structure
 --------------------------------------------------------------*/
-.full{ 						/* Added to header, content and footer. This is a multi selector */
-	background-color: #66b1f9; /* Sets the background color for the site */
+.full{ 							/* Added to header, content and footer. This is a multi-purpose selector */
+	background-color: #66b1f9; 	/* Sets the background color for the site */
 }
 
-.main-page{ 				/* Added to header, content and footer. This is a multi selector */
-	max-width: 960px; 		/* This is to set max-width of 960px for the screen */
-	margin: 0 auto; 		/* 0 for top/bottom and auto for left and right */
+.main-page{ 				/* Added to header, content and footer. This is a multi-purpose selector */
+	max-width: 960px; 		/* This is to set a max-width of 960px for the screen */
+	margin: 0 auto; 		/* No margin for top/bottom and auto margin for left and right */
 }
 
-.inner{ 					/* Added to header, content and footer. This is a multi selector */
-	padding: 2em 0; 		/* 2em for top/bottom and 0 for left and right */
+.inner{ 					/* Added to header, content and footer. This is a multi-purpose selector */
+	padding: 2em 0; 		/* 2em of padding for top/bottom and no padding for left and right */
 }	
 
 #primary{					/* This is to set the formatting for the main area of the site. */
 	float: left; 			/* This is to float the primary content to the left side of the screen. */
 	padding: 20px 20px; 	/* This is to add left and right padding of 50px so the content is not flushed on either side of the screen. */
 	width: 66.5%;  			/* This is to set 66.5 % of the screen width for primary content. */
-	border: 10px solid black;
+	border: 10px solid black; /* This adds a block border around the primary content with a thickness of 10px */
 }
 
 #secondary.left {			/* This is to set the formatting for the sidebar area when the sitebar option is selected to be displayed on the left side. */
 	float: left;			/* This is to float the secondary content to the left side of the screen. */
 	padding: 10px 10px;		/* This is to add left and right padding of 10px so the content is not flushed on either side of the screen */
-	width: 33.5%;			/* This is to set 33.5 % of the screen width for secondary content. */
-	font-size: 75%;			/* This is to set the font-size oto75% of the font-size set globally. */
+	width: 30%;				/* This is to set 33.5 % of the screen width for secondary content. */
+	font-size: 75%;			/* This is to set the font-size to 75% of the font-size set globally. */
+	margin-left: 1.5%;		/* This is to set left margin 1.5% */
+	margin-right: 2%;		/* This is to set right margin 2% */
+	border: 10px solid black;  /*  This adds a block border around the primary content with a thickness of 10px */
 }
 
-#secondary.right {			/* This is to set the formatting for the sidebar area when the sitebar option is selected to be displayed on the right side. */
+#secondary.right {			/* This is to set the formatting for the sidebar area when the sidebar option is selected to be displayed on the right side. */
 	float: right;			/* This is to float the secondary content to the right side of the screen. */
 	padding: 10px 10px;		/* This is to add left and right padding of 10px so the content is not flushed on either side of the screen */
-	width: 33.5%;			/* This is to set 33.5 % of the screen width for secondary content. */
+	width: 30%;				/* This is to set 33.5 % of the screen width for secondary content. */
 	font-size: 75%;			/* This is to set the font-size oto75% of the font-size set globally. */
+	margin-left: 3.5%;		/* This is to set right margin 3.5% */
+	border: 10px solid black;  /* This adds a block border around the primary content with a thickness of 10px */
 }
+
 .signature {				/* Added style to signature (bold and italic) */
 	font-style: italic;		/* To set font-style italic */
 	font-weight: bold;		/* To set font-weight bold */
 }
 
-img.wp-post-image {  		/* Sets the width/height of the feautured image on the custom page */
-	width : 75%;			/* Sets the width to 75% of the image size */
-	height: 75%;			/* Sets the height to 75% of the image size */
+img.wp-post-image {         /* Reference for featured image, image was part of the Public Domain and free for commercial use -        https://pixabay.com/en/home-office-workstation-office-336378/ */
+	width : 75%;			/* Sets the width to 75% of the image size on the custom home page */
+	height: 75%;			/* Sets the height to 75% of the image size on the custom home page */
 }
-							/* This is to style custom fields */
-.post-meta-key {
-	color: green;			/* Sets the custom field label color to green */
-	font-weight: bold;		/* Sets the custom field label font wieght to bold */
-	font-size: 90%; 		/* Sets the custom field label font size to 90% of the set size */
-	display: inline;		/* ??? */
-	}
-.post-meta {
-	font-variant: small-caps; /* Sets the custom field data font varient to small-caps meaning a word like course will be displayed like Course */
-	color: maroon;			/* Sets the custom field data color to maroon */
-	font-size: 80%;			/* Sets the custom field data font size to 80% of the set size */
-	}	
+	
 .copyright {
 	float: right;			/* This is to float the secondary content to the right side of the screen. */
 	}
-.mission{
-	font-style: italic;
-	font-weight: bold;
-	color: #444;
+	
+.mission {					/* This is to style the mission statement custom field. */
+	font-style: italic;     /* This makes the font italisized. */
+	font-weight: bold;      /* This makes the font bolded. */
+	color: #444;            /* This sets the color of the string of text in the custom field. */
 }
 
 /*--------------------------------------------------------------
@@ -176,9 +172,8 @@ dfn {
 	font-style: italic;
 }
 
-h1 {
-	/*font-size: 1.5em;  changed from 2em to 1em */
-	font-size: 125%; /* Sets the header size to 125% of the default setting */
+h1 {				
+	font-size: 125%; 		/* Sets the header size to 125% of the default setting */
 	margin: 0.67em 0;
 }
 
@@ -331,11 +326,11 @@ button,
 input,
 select,
 textarea {
-	color: #404040; /* This is Grey color */
-	font-family: 'Droid Serif', Helvetica, sans-serif; /* Added 'Droid Serif' and Helvetica fonts  */
-	font-size: 12px;   /* Reduce the font size to 12px */
-	font-size: 1.2rem; /* Reduce the font size to 1.2 rem */
-	line-height: 1;	   /* Reduce the line height to 1 */
+	color: #404040; 									/* This sets the color of all of the listed selectors */
+	font-family: 'Droid Serif', Helvetica, sans-serif; 	/* Added 'Droid Serif' and Helvetica fonts  */
+	font-size: 12px;   									/* Sets the font size to 12px */
+	font-size: 1.2rem;									/* Sets the font size to 1.2 rem */
+	line-height: 1;	  									/* Sets the line height to 1 */
 }
 
 h1,
@@ -346,28 +341,27 @@ h5,
 h6 {
 	clear: both; 
 }
-/* Add comments here, this is a new section */
-.blog h1,
+
+.blog h1,                                     
 .blog h2,
 .blog h3,
 .blog h4,
 .blog h5,
 .blog h6 {
-	font-family: 'Droid Sans', serif;
-	font-size: 16px;
-	font-size: 1.6rem;
-	/*clear: both; */
+	font-family: 'Droid Sans', serif;         /* Added 'Droid Serif' to style all the headers in the blog posts  */
+	font-size: 16px;                          /* Sets the font size to 16px */
+	font-size: 1.6rem;                        /* Sets the font size to 1.6rem */
 }
 
-/* Add comments here, this is a new section */
+
 .blog h1 a,
 .blog h2 a,
 .blog h3 a,
 .blog h4 a,
 .blog h5 a,
 .blog h6 a {
-	color: #518e00;  /* Green color */
-	text-decoration : none;
+	color: #fff;                        /* Sets the colour of headers in the blog posts to white */
+	text-decoration : none;             /* Sets the decoration of the font to none meaning there is no underline. */
 }
 
 p {
@@ -632,7 +626,7 @@ a:active {
 	list-style: none; 
 	margin: 0; 
 	padding-left: 0; 
-	max-width: 100%; /* Added max-width to 100%, add comments here */
+	max-width: 100%;					 /* Sets the max-width to 100% of the screen */
 }
 
 .main-navigation li {
@@ -643,15 +637,15 @@ a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-	color: #fff; 		/*Added, add comments here */
-	padding: 15px 40px; /*Added, add comments here */
+	color: #fff; 						/*Sets the colour of the text in the main navigation menu to white */
+	padding: 15px 40px; 				/* Sets a padding of 15px for top/bottom and 40px for left and right  */
 }
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
-	top: 2.0em; 	/*changed from 1.5em to 3.3em this is for sub menu, add comments here */
+	top: 2.0em; 						/*Adds padding of 2.0em to the top of the sub menu item */
 	left: -999em;
 	z-index: 99999;
 }
@@ -670,12 +664,12 @@ a:active {
 
 .main-navigation li:hover > a,
 .main-navigation li.focus > a {
-	background-color: #444; /* Added, add comments here */
+	background-color: #444; 					/* Sets the background color of the main navigation */
 }
 
 .main-navigation ul ul :hover > a,
 .main-navigation ul ul .focus > a {
-		background-color: #444; /* Added, add comments here */
+		background-color: #444; 				/* Sets the background color main navigation hover */
 }
 
 .main-navigation ul ul a:hover,
@@ -705,7 +699,7 @@ a:active {
 	display: block;
 }
 
-@media screen and (min-width: 600px) { /* This will make menu toggle to button for width less than 480px */
+@media screen and (min-width: 751px) { /* This will make menu toggle to button for width more then 751px */
 	.menu-toggle {
 		display: none;
 	}
@@ -715,20 +709,78 @@ a:active {
 	}
 }
 
-@media screen and (max-width: 750px) { /* This will make primary/secondary to take 100% width for width less than 750px */
+@media screen and (max-width: 750px) { /* This will make primary/secondary to take 100% of the width for any width less than 750px */
 
-	#primary,
-	#secondary {
-		float: none; 			/* This is to initialize float of primary and secondary to none. */
-		padding: 0;				/* This is to initialize padding to zero of primary and secondary. */
-		width: 100%;			/* This is to reset the width to 100% for primary and secondary when reducing the screen size which is set in the media query. */
+#primary {
+		float: left; 		/* This is to float the primary to the left. */
+		padding: 0;			/* This is to set a padding to zero */
+		width: 100%;		/* This is to reset the width to 100% for primary  when reducing the screen size which is set in the media query. */
 	}
 	
-	.inner {
-		padding-right :30px;	/* This is to give 30px right padding for smaller width screen. */
-		padding-left :30px;		/* This is to give 30px left padding for smaller width screen. */
+#secondary.left {			/* This is to set the formatting of the sidebar area when the sitebar option is selected to be displayed on the left side. */
+	float: left;			/* This is to float the primary to the left. */
+	padding: 0;				/* This is to set a padding to zero */
+	width: 100%;			/* This is to set 100% of the screen width. */
+	font-size: 75%;			/* This is to set the font-size to 75% of the font-size set globally. */
+	margin-top: 1.5%;		/* This is to set a top margin of 1.5% */
+	margin-bottom: 1.5%;	/* This is to set a bottom margin of 1.5% */
+	margin-left: 0;			/* This is to set a left margin of 0 */
+	margin-right: 0;		/* This is to set a bottom margin of 0 */ 
+	border: 10px solid black;  /*  This adds a block border around content with a thickness of 10px */
+}
+
+#secondary.right {			/* This is to set the formatting for the sidebar area when the sitebar option is selected to be displayed on the right side. */
+	float: right;			/* This is to float the primary to the right. */
+	padding: 0;				/* This is to set a padding to zero */
+	width: 100%;			/* This is to set 100% of the screen width. */
+	font-size: 75%;			/* This is to set the font-size to 75% of the font-size set globally. */
+	margin-top: 1.5%;		/* This is to set a top margin of 1.5% */
+	margin-bottom: 1.5%;	/* This is to set a bottom margin of 1.5% */
+	margin-left: 0;			/* This is to set a left margin of 0 */
+	margin-right: 0;		/* This is to set a bottom margin of 0 */ 	
+	border: 10px solid black;  /*  This adds a block border around content with a thickness of 10px */
+}
+
+.inner {
+		padding-right :30px;	/* This is to give 30px right padding for the smaller width screen. */
+		padding-left :30px;		/* This is to give 30px left padding for the smaller width screen. */
 	}
 } 
+
+@media only screen and (max-width:480px) { /* This will make primary/secondary to take 100% width for the width less than 480px */
+#primary{
+	width:100%;				/* This is to set 100% of the screen width. */
+}
+
+#secondary.left {			/* This is to set the formatting of the sidebar area when the sitebar option is selected to be displayed on the left side. */
+	float: left;			/* This is to float the primary to the left. */
+	padding: 0;				/* This is to set a padding to zero */
+	width: 100%;			/* This is to set 100% of the screen width. */
+	font-size: 60%;			/* This is to set the font-size to 60% of the font-size set globally. */
+	margin-top: 1.5%;		/* This is to set a top margin of 1.5% */
+	margin-bottom: 1.5%;	/* This is to set a bottom margin of 1.5% */
+	margin-left: 0;			/* This is to set a left margin of 0 */
+	margin-right: 0;		/* This is to set a bottom margin of 0 */ 	
+	border: 10px solid black;  /*  This adds a block border around content with a thickness of 10px */
+}
+
+#secondary.right {			/* This is to set the formatting for the sidebar area when the sitebar option is selected to be displayed on the right side. */
+	float: right;			/* This is to float the primary to the right. */
+	padding: 0;				/* This is to set a padding to zero */
+	width: 100%;			/* This is to set 100% of the screen width. */
+	font-size: 60%;			/* This is to set the font-size to 60% of the font-size set globally. */
+	margin-top: 1.5%;		/* This is to set a top margin of 1.5% */
+	margin-bottom: 1.5%;	/* This is to set a bottom margin of 1.5% */
+	margin-left: 0;			/* This is to set a left margin of 0 */
+	margin-right: 0;		/* This is to set a bottom margin of 0 */ 	
+	border: 10px solid black;  /*  This adds a block border around content with a thickness of 10px */
+}
+
+.mission{
+	display: none;			/* This will hide the missiong statement on the custom home page */
+}
+}
+
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,

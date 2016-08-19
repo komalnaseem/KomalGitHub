@@ -46,8 +46,6 @@ function kn_setup() {
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'kn' )
 	) ); 
-	
-	/*register_nav_menus( array('secondary'=>__( 'Footer Menu' ),));*/
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -105,8 +103,8 @@ add_action( 'widgets_init', 'kn_widgets_init' );
  */
 function kn_scripts() {
 	wp_enqueue_style( 'kn-style', get_stylesheet_uri() );
-	
-	wp_enqueue_style('kn-google-fonts', 'http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic');
+
+	wp_enqueue_style('kn-google-fonts', 'http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic'); 	/* This function enques the font Droid Serif to be used for styling - https://developer.wordpress.org/reference/functions/wp_enqueue_style/ */
 
 	wp_enqueue_script( 'kn-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -144,12 +142,13 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
- * Load Options file.
+ * Load Options file using the relative path. This sets the path of options.php file by using an relative path. Function get_stylesheet_directory gets the path to the stylesheet directory and then I concatenate '/inc/options.php' to give the full
+ * path.
  */
 require get_stylesheet_directory() . '/inc/options.php';
 
 /**
- * Add Signature Image after single post
+ * Add Signature after single post
  */
 add_filter('the_content','add_signature', 1);
 
